@@ -8,13 +8,18 @@ import { ProfileComponent } from './component/profile/profile.component';
 
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent },
-    {path: 'login', component: LoginComponent},
-    {path: 'register', component: RegisterComponent},
+    {path: '', component: HomeComponent, children: [
+        {path: 'login', component: LoginComponent},
+        {path: 'register', component: RegisterComponent},    
+        {path: 'profile', component: ProfileComponent},  
+    ]},
     {path: 'comments', component: CommentsComponent},
-    {path: 'profile', component: ProfileComponent},  
-];
+    
+    ];
+    
 
 
 
 
+           
+    
