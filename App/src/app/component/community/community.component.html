@@ -1,0 +1,51 @@
+<!-- <div class="community-container">
+  <mat-card class="community-card">
+    <h2>Community UrbanVibe</h2>
+
+    <div class="comments-list">
+      <mat-card class="comment" *ngFor="let comment of comments">
+        <div class="comment-text">{{ comment.text }}</div>
+        <div class="comment-info">
+          <span>{{ comment.user }}</span>
+          <span>{{ comment.date }}</span>
+        </div>
+      </mat-card>
+    </div><br>
+
+    
+    <form [formGroup]="commentForm" (ngSubmit)="addComment()" class="comment-form">
+      <mat-form-field appearance="fill" class="comment-input">
+        <mat-label>Scrivi un commento</mat-label>
+        <input matInput formControlName="comment" placeholder="Lascia il tuo pensiero...">
+        <mat-error *ngIf="commentForm.controls['comment'].invalid">
+          Inserisci un commento!
+        </mat-error> 
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" [disabled]="commentForm.invalid">
+        Pubblica
+    </button>
+   </form>
+  </mat-card>
+</div> -->
+ <!-- <div class="profile-list">
+  <div *ngFor="let user of users" class="profile-item">
+    <h3>{{ user.name }}</h3>
+    <p>{{ user.email }}</p>  
+   </div>
+</div>   -->
+
+<div class="users">
+  <h2>Utenti</h2>
+  <div *ngFor="let user of users">
+    <p>{{ user.name }}</p>
+  </div>
+</div>
+
+<div class="posts">
+  <h2>Post</h2>
+  <div *ngFor="let post of posts">
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.body }}</p>
+
+
+  
